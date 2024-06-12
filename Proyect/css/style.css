@@ -31,7 +31,7 @@ a {
     font-weight: 600; }
 
 .custom-navbar {
-  background: #3b5d50 !important;
+  background: #b3227f !important;
   padding-top: 20px;
   padding-bottom: 20px; }
   .custom-navbar .navbar-brand {
@@ -95,8 +95,15 @@ a {
       .custom-navbar .custom-navbar-cta li:first-child {
         margin-right: 20px; }
 
+#IJapan{
+  height: 450px;
+  width: 650px;
+  border-radius: 20px;
+  max-width: 100
+}
+
 .hero {
-  background: #3b5d50;
+  background: #b3227f;
   padding: calc(4rem - 30px) 0 0rem 0; }
   @media (min-width: 768px) {
     .hero {
@@ -123,7 +130,7 @@ a {
   .hero .hero-img-wrap {
     position: relative; }
     .hero .hero-img-wrap img {
-      position: relative;
+      position:absolute;
       top: 0px;
       right: 0px;
       z-index: 2;
@@ -318,7 +325,7 @@ a {
     display: grid;
     -ms-grid-columns: (1fr)[27];
     grid-template-columns: repeat(27, 1fr);
-    position: relative; }
+    position: relative;}
     .we-help-section .imgs-grid:before {
       position: absolute;
       content: "";
@@ -359,6 +366,7 @@ a {
         -ms-grid-row-span: 27;
         grid-row: 6 / span 27;
         padding-top: 20px; }
+      
 
 .custom-list {
   width: 100%; }
@@ -559,7 +567,7 @@ a {
     .footer-section .subscription-form h3 {
       font-size: 18px;
       font-weight: 500;
-      color: #3b5d50; }
+      color:#2f2f2f; }
     .footer-section .subscription-form .form-control {
       height: 50px;
       border-radius: 10px;
@@ -568,7 +576,7 @@ a {
         outline: none;
         -webkit-box-shadow: none;
         box-shadow: none;
-        border-color: #3b5d50;
+        border-color: #5a70e1;
         -webkit-box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
       .footer-section .subscription-form .form-control::-webkit-input-placeholder {
@@ -585,7 +593,7 @@ a {
     position: absolute;
     top: -200px;
     z-index: 1;
-    right: 0; }
+    right: 50px;}
     .footer-section .sofa-img img {
       max-width: 380px; }
   .footer-section .links-wrap {
