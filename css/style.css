@@ -97,7 +97,7 @@ a {
 
 
 .hero {
-  background-image: url("/images/NewImages/Japan.jpg");
+  background-image: url("/images/NewImages/WinterWonderland.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   padding: calc(4rem - 30px) 0 0rem 0; }
@@ -115,14 +115,16 @@ a {
         max-width: 450px; } }
   .hero h1 {
     font-weight: 700;
-    color: #ffffff;
+    color: #2f2f2f;
     margin-bottom: 30px; }
     @media (min-width: 1400px) {
       .hero h1 {
         font-size: 54px; } }
   .hero p {
-    color: rgba(255, 255, 255, 0.5);
-    margin-botom: 30px; }
+    color: #2f2f2f;
+    margin-botom: 30px; 
+    font-weight: bold;
+  }
   .hero .hero-img-wrap {
     position: relative; }
     .hero .hero-img-wrap img {
@@ -183,19 +185,22 @@ a {
       background: #314d43;
       border-color: #314d43; }
   .btn.btn-secondary {
-    color: #2f2f2f;
-    background: #f9bf29;
-    border-color: #f9bf29; }
+    color: #ffffff;
+    background: #2f2f2f;
+    border-color: #2f2f2f;  }
     .btn.btn-secondary:hover {
-      background: #f8b810;
-      border-color: #f8b810; }
+      color: #ffffff;
+      background: #2f2f2f;
+      border-color: #2f2f2f;  }
   .btn.btn-white-outline {
-    background: transparent;
     border-width: 2px;
-    border-color: rgba(255, 255, 255, 0.3); }
+    color: #ffffff;
+    background: #2f2f2f;
+    border-color: #2f2f2f;  }
     .btn.btn-white-outline:hover {
-      border-color: white;
-      color: #ffffff; }
+      color: #ffffff;
+      background: #2f2f2f;
+      border-color: #2f2f2f;  }
 
 .section-title {
   color: #2f2f2f; }
