@@ -1,8 +1,8 @@
 let loaded = (eventLoaded) => {
 
-  window.alert("landing page loaded");
-  console.log(eventLoaded);
+
   submitValues();
+  obtenerDatos();
 
 }
 
@@ -15,11 +15,11 @@ let submitValues = () => {
     event.preventDefault();
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
-    const blog = document.getElementById('blog').value;
+    const blog = document.getElementById('BlogOptions').value;
 
     const datos = {
-      nombre: nombre,
       email: email,
+      nombre: nombre,
       blog: blog,
     };
     fetch('https://prueba-f6141-default-rtdb.firebaseio.com/collection.json', {
@@ -31,27 +31,46 @@ let submitValues = () => {
     })
       .then(respuesta => respuesta.json())
       .then(datos => {
-        console.log(datos);
+        alert("¡Tu respuesta ha sido guardada con exito");
+        obtenerDatos();
+
       })
       .catch(error => console.error(error));
-  });
+  })
+  obtenerDatos();
 
 }
 
-let map = new Map();
-
 async function obtenerDatos() {
-  const url = "'https://prueba-f6141-default-rtdb.firebaseio.com/collection.json'";
+  const url = 'https://prueba-f6141-default-rtdb.firebaseio.com/collection.json';
   const respuesta = await fetch(url);
-
   if (!respuesta.ok) {
     console.error("Error:", respuesta.status);
     return;
   }
-
   const datos = await respuesta.json();
+  const map = new Map;
+  for (let data in datos) {
+    const MapB= datos[data]
+    console.log(MapB.blog);
+    const Topic= MapB.blog
+   if(map.has(Topic)){
+      map.get(Topic).push(MapB.nombre);
+    }
+    else{
+      map.set(Topic,[MapB.nombre])
+    }
+  }
+  const newMap = Array.from(map.entries()).sort((a, b) => b[1].length  - a[1].length);
 
+  const sortedMap = new Map(newMap);
 
+  const Tabla = document.getElementById("tablebody");
+  Tabla.innerHTML = "";
+  sortedMap .forEach((Nombre, Topic)=>{
+    const fila = Tabla.insertRow();
+    fila.insertCell().textContent = Topic;
+    fila.insertCell().textContent = Nombre.length;
+  })
 }
 
-obtenerDatos();
